@@ -153,6 +153,42 @@
         background-position: bottom;
       }
     }
+    .meatpoints {
+      height: 70px;
+      position: relative;
+      .meatpoints-value {
+        font-size: 16px;
+        text-align: center;
+        font-weight: bolder;
+        text-shadow: 0 0 2px white, 0 1px 2px white, 1px 0 2px white,
+          1px 1px 2px white;
+      }
+      .meatpoints-top {
+        border-bottom: none;
+        position: absolute;
+        font-size: 24px;
+        top: 10px;
+        width: 70px;
+        left: calc(50% + 35px);
+      }
+      .meatpoints-bottom {
+        border-bottom: none;
+        position: absolute;
+        bottom: 8px;
+        width: 40px;
+        right: calc(50% + 20px);
+      }
+      .meatpoints-empty {
+        background: url("../assets/heart_empty.png") no-repeat center;
+        background-size: 70px;
+        background-position: top;
+      }
+      .meatpoints-full {
+        background: url("../assets/heart_full.png") no-repeat center;
+        background-size: 70px;
+        background-position: bottom;
+      }
+    }
     .saving-throw {
       .attribute-value.flat {
         line-height: 30px;
