@@ -79,6 +79,11 @@ export default class OseDataModelCharacter extends foundry.abstract.DataModel {
         value: new NumberField({ integer: true }),
         max: new NumberField({ integer: true }),
       }),
+      mp: new ObjectField({
+        hd: new StringField(),
+        value: new NumberField({ integer: true }),
+        max: new NumberField({ integer: true }),
+      }),
       thac0: new ObjectField(),
       languages: new ObjectField(),
       saves: new ObjectField({
