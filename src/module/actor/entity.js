@@ -145,6 +145,12 @@ export default class OseActor extends Actor {
     return this.update({ "system.hp": { max: total, value: total } });
   }
 
+  async rollMP(options = {}) {
+    const { total } = await new Roll(this.system.mp.hd).roll({ async: true });
+    let rolledMp = total + system.hp.value
+    return this.update({ "system.mp": { max: rolledMp, value: rolledMp } });
+  }
+
   rollSave(save, options = {}) {
     const label = game.i18n.localize(`OSE.saves.${save}.long`);
     const rollParts = ["1d20"];
@@ -538,11 +544,22 @@ export default class OseActor extends Actor {
   async applyDamage(amount = 0, multiplier = 1) {
     amount = Math.floor(parseInt(amount) * multiplier);
 
-    const { value, max } = this.system.hp;
+    const { HpValue, HpMax } = this.system.hp;
+    const { MpValue, MpMax } = this.system.mp;
 
     // Update the Actor
+    if (amount > HpValue)
+    {
+      return this.update({
+        "system.hp.value": 0,
+        "system.mp.value": Math.clamped(MpValue - (amount - HpValue), 0, MpMax),
+      });
+    }
+    else
+    {
     return this.update({
-      "system.hp.value": Math.clamped(value - amount, 0, max),
+      "system.hp.value": Math.clamped(HpValue - amount, 0, HpMax),
     });
+    }
   }
 }
