@@ -44,9 +44,9 @@ export default class OseDataModelCharacterEncumbranceSlot
     super(OseDataModelCharacterEncumbranceSlot.type, max);
     this.#weight = items.reduce(
       (acc, { type, system: { quantity, weight } }: Item) => {
-        if (type === "item") return acc + quantity.value * weight;
+        if (type === "item") return acc + Math.ceil(quantity.value * weight);
         if (["weapon", "armor", "container"].includes(type))
-          return acc + weight;
+          return acc + Math.ceil(weight);
         return acc;
       },
       0
