@@ -43,7 +43,7 @@
   "OSE.roll.hd": "Rzut Kością Wytrzymałości",
   "OSE.roll.attacksWith": "Atakuje używając: {name}",
   "OSE.roll.attacks": "{name} atakuje!",
-  "OSE.roll.save": "Rzut Obronny przeciw {save}",
+  "OSE.roll.save": "RO na {save}",
   "OSE.roll.details.save": "Rzuć 1d20 >= {save} for success",
   "OSE.roll.attribute": "{attribute} check",
   "OSE.roll.details.attribute": "Roll 1d20 <= {score} for success",
