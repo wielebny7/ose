@@ -80,10 +80,10 @@
                 <div class="health-empty" style="height:{{counter false system.hp.value system.hp.max}}%"></div>
                 <div class="health-full" style="height:{{counter true system.hp.value system.hp.max}}%"></div>
             </div>
-            <div class="meatpoints">
-                <input class="meatpoints-value meatpoints-top" name="system.mp.value" type="text" value="{{system.mp.value}}"
+            <div class="health meatpoints">
+                <input class="health-value health-top" name="system.mp.value" type="text" value="{{system.mp.value}}"
                     data-dtype="Number" placeholder="0" title="{{localize 'OSE.Meatpoints'}}" />
-                <input class="meatpoints-value meatpoints-bottom" name="system.mp.max" type="text" value="{{system.mp.max}}"
+                <input class="health-value health-bottom" name="system.mp.max" type="text" value="{{system.mp.max}}"
                     data-dtype="Number" placeholder="0" title="{{localize 'OSE.MeatpointsMax'}}" />
                 <div class="meatpoints-empty" style="height:{{counter false system.mp.value system.mp.max}}%"></div>
                 <div class="meatpoints-full" style="height:{{counter true system.mp.value system.mp.max}}%"></div>
