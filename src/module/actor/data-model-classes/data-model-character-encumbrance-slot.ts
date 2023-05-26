@@ -65,7 +65,9 @@ export default class OseDataModelCharacterEncumbranceSlot
 
   // eslint-disable-next-line class-methods-use-this
   get steps() {
-    return Object.values(this.encumbranceSteps);
+    return Object.values(this.encumbranceSteps).map(
+      (s) => 100 * (s / this.max)
+    );
   }
 
   get atHalfEncumbered() {
