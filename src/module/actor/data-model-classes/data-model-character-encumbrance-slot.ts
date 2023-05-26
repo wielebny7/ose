@@ -29,13 +29,13 @@ export default class OseDataModelCharacterEncumbranceSlot
    */
   static localizedLabel = "OSE.Setting.EncumbranceSlot";
 
-  encumbranceSteps = {
-    light: this.max - 6,
-    medium: this.max - 4,
-    heavy: this.max - 2,
-  };
-
   #weight;
+
+  private encumbranceSteps: {
+    quarter: number;
+    threeEighths: number;
+    half: number;
+  };
 
   constructor(
     max = OseDataModelCharacterEncumbrance.baseEncumbranceCap,
@@ -51,10 +51,16 @@ export default class OseDataModelCharacterEncumbranceSlot
       },
       0
     );
+
+    this.encumbranceSteps = {
+      quarter: this.max - 6,
+      threeEighths: this.max - 4,
+      half: this.max - 2,
+    };
   }
 
   get value(): number {
-    return this.#weight;
+    return Math.ceil(this.#weight);
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -63,14 +69,14 @@ export default class OseDataModelCharacterEncumbranceSlot
   }
 
   get atHalfEncumbered() {
-    return this.value >= this.encumbranceSteps.heavy;
+    return this.value >= this.encumbranceSteps.half;
   }
 
   get atThreeEighthsEncumbered() {
-    return this.value >= this.encumbranceSteps.medium;
+    return this.value >= this.encumbranceSteps.threeEighths;
   }
 
   get atQuarterEncumbered() {
-    return this.value >= this.encumbranceSteps.light;
+    return this.value >= this.encumbranceSteps.quarter;
   }
 }
