@@ -376,9 +376,9 @@
     <span class="encumbrance-bar" style="width:{{pct}}%"></span>
     {{#each steps as |s|}}
     <span class="encumbrance-breakpoint" style="left:{{s}}%">
-      <i class="arrow-up"></i>
-      <i class="arrow-down"></i>
-      <span class="tooltip">Tooltip test {{s}}%</span>
+      <div class="arrow-down"></div>
+      <div class="arrow-up"></div>
+      <span class="tooltip">{{s / 100 * max}}%</span>
     </span>
     {{/each}}
     <span class="encumbrance-label">{{value}} / {{max}}</span>

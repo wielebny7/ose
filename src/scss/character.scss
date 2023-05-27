@@ -263,13 +263,17 @@
     }
 
     .encumbrance-breakpoint .tooltip {
+      $size: 50px;
       visibility: hidden;
-      width: 120px;
+      width: $size;
       background-color: black;
       color: #fff;
       text-align: center;
       border-radius: 3px;
       padding: 5px 0;
+      bottom: 100%;
+      left: 50%;
+      margin-left: $size / -2;
 
       /* Position the tooltip */
       position: absolute;
