@@ -375,8 +375,11 @@
   <div class="encumbrance {{#if encumbered}}encumbered{{/if}}">
     <span class="encumbrance-bar" style="width:{{pct}}%"></span>
     {{#each steps as |s|}}
-    <i class="encumbrance-breakpoint arrow-up" style="left:{{s}}%"></i>
-    <i class="encumbrance-breakpoint arrow-down" style="left:{{s}}%"></i>
+    <span class="encumbrance-breakpoint" style="left:{{s}}%">
+      <i class="arrow-up"></i>
+      <i class="arrow-down"></i>
+      <span class="tooltip">Tooltip test {{s}}%</span>
+    </span>
     {{/each}}
     <span class="encumbrance-label">{{value}} / {{max}}</span>
   </div>
