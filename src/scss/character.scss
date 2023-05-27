@@ -226,7 +226,7 @@
 
     .encumbrance-label {
       height: 10px;
-      padding: 0 5px;
+      padding: 0 0;
       position: absolute;
       top: 0;
       right: 10px;
@@ -235,6 +235,7 @@
       text-align: right;
       color: #eee;
       text-shadow: 0 0 5px #000;
+      background-color: #00000038;
     }
 
     .encumbrance-breakpoint {
