@@ -378,7 +378,7 @@
     <span class="encumbrance-breakpoint" style="left:{{s}}%">
       <div class="arrow-down"></div>
       <div class="arrow-up"></div>
-      <span class="tooltip">{{s / 100 * max}}%</span>
+      <span class="tooltip">{{mult max (mult s 0.01)}}%</span>
     </span>
     {{/each}}
     <span class="encumbrance-label">{{value}} / {{max}}</span>
