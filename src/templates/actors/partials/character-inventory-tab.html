@@ -375,7 +375,7 @@
   <div class="encumbrance {{#if encumbered}}encumbered{{/if}}">
     <span class="encumbrance-bar" style="width:{{pct}}%"></span>
     {{#each steps as |s|}}
-    <span class="encumbrance-breakpoint" style="left:{{s}}%">
+    <span class="encumbrance-breakpoint tooltip-trigger" style="left:{{s}}%">
       <div class="arrow-down"></div>
       <div class="arrow-up"></div>
       <span class="tooltip">{{mult 0.01 (mult s ../max)}}</span>

@@ -262,7 +262,7 @@
       border-top: 4px solid $colorFaint;
     }
 
-    .encumbrance-breakpoint .tooltip {
+    .tooltip-trigger .tooltip {
       $size: 50px;
       visibility: hidden;
       width: $size;
@@ -280,7 +280,7 @@
       z-index: 1;
     }
 
-    .encumbrance-breakpoint:hover .tooltip {
+    .tooltip-trigger:hover .tooltip {
       visibility: visible;
     }
 
