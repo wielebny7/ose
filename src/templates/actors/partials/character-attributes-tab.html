@@ -6,9 +6,10 @@
                 <h4 class="attribute-name box-title" title="{{ localize 'OSE.scores.str.long' }}">
                     <a>{{ localize "OSE.scores.str.short" }}</a>
                 </h4>
-                <div class="attribute-value">
+                <div class="attribute-value tooltip-trigger">
                     <input name="system.scores.str.value" type="text" value="{{system.scores.str.value}}" placeholder="0"
-                        data-dtype="Number" />
+                           data-dtype="Number" />
+                    <span class="tooltip">{{system:scores.str.mod}}</span>
                 </div>
             </li>
             <li class="attribute ability-score" data-score="int">
