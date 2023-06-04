@@ -485,9 +485,6 @@ export default class OseActor extends Actor {
       attData.item?.system?.damage ?? "1d6",
     ]);
 
-    console.log( !this.system.config?.ignoreBonusDamage );
-    console.log( attData.item?.system?.bonus );
-
     if (!this.system.config?.ignoreBonusDamage && attData.item?.system?.bonus)
       // Weapon Damage Bonus
       dmgParts.push(attData.item?.system?.bonus);
