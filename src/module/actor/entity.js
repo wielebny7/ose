@@ -484,6 +484,10 @@ export default class OseActor extends Actor {
       // Weapon damage roll value
       attData.item?.system?.damage ?? "1d6",
     ]);
+
+    log( !this.system.config?.ignoreBonusDamage );
+    log( attData.item?.system?.bonus );
+
     if (!this.system.config?.ignoreBonusDamage && attData.item?.system?.bonus)
       // Weapon Damage Bonus
       dmgParts.push(attData.item?.system?.bonus);
