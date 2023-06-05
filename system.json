@@ -1,7 +1,7 @@
 {
-  "name": "ose",
-  "id": "ose",
-  "title": "Old-School Essentials Kapcio remix 2",
+  "name": "ose-dev",
+  "id": "ose-dev",
+  "title": "Old-School Essentials Development Build",
   "description": "Simple, robust rules compatible with decades of Basic/Expert material",
   "version": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
   "minimumCoreVersion": "10",
@@ -35,11 +35,6 @@
       "lang": "en",
       "name": "English (UK)",
       "path": "dist/lang/en.json"
-    },
-    {
-      "lang": "pl",
-      "name": "Polski",
-      "path": "dist/lang/pl.json"
     },
     {
       "lang": "it",
@@ -80,6 +75,11 @@
       "lang": "sv",
       "name": "Svenska (Sverige)",
       "path": "dist/lang/sv.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski (Polska)",
+      "path": "dist/lang/pl.json"
     }
   ],
   "gridDistance": 5,
