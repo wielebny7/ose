@@ -298,6 +298,10 @@
     display: flex;
     overflow: hidden;
   }
+  .nowrap {
+    flex-wrap: nowrap;
+  }
+
   /* ----------------------------------------- */
   /*  Item Controls                            */
   /* ----------------------------------------- */
